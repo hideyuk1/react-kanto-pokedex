@@ -1,0 +1,134 @@
+@value transition-duration: 200ms;
+@value diameter: calc(4rem + 3vmin);
+@value radius: calc((4rem + 3vmin) / 2);
+
+.scopedVariables {
+    --expanded-width-unitless: 200;
+    --expanded-width-px: calc(var(--expanded-width-unitless) * 1px);
+}
+
+@media only screen and (min-width: 600px) {
+    .scopedVariables {
+        --expanded-width-unitless: 400;
+    }
+}
+
+.invisible {
+    composes: invisible from '~global.module.css';
+}
+
+.buttonRoot {
+    background-color: var(--test);
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    height: diameter;
+    width: diameter;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    transition: transform 200ms linear;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.buttonRoot:focus {
+    outline: none;
+}
+
+.common {
+    flex-shrink: 0;
+    height: inherit;
+    background-color: #e0e0e0;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    transition: transform transition-duration linear;
+}
+
+.left {
+    composes: common;
+    width: 52%;
+    position: absolute;
+    border-radius: radius 0 0 radius;
+    transform-origin: right;
+    z-index: 1;
+    left: 0;
+    clip-path: inset(-40px 1px -40px -40px);
+}
+
+.middle {
+    composes: common;
+    box-shadow: 0px 0px 80px -20px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    transform: scaleX(0.001);
+    z-index: 2;
+    clip-path: inset(-40px 0px -40px 0px);
+}
+
+.middleExpanded {
+    composes: scopedVariables;
+    transform: scaleX(calc((var(--expanded-width-unitless) + 10) / 1000));
+}
+
+.right {
+    composes: common;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    margin-right: -1px;
+    border-radius: 0 radius radius 0;
+}
+
+.rightTranslated {
+    composes: scopedVariables;
+    transform: translateX(calc(var(--expanded-width-px) / 2));
+}
+
+.iconWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-size: calc(1rem + 3vmin);
+}
+
+.iconTransformWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform transition-duration linear;
+    transform: translateX(0);
+}
+
+.leftTranslated {
+    composes: scopedVariables;
+    transform: translateX(calc(-1 * (var(--expanded-width-px) / 2)));
+}
+
+.search {
+    composes: scopedVariables;
+    position: absolute;
+    transform: translateX(calc((4rem + 3vmin) / 4));
+    align-items: center;
+    z-index: 3;
+    font-size: calc(1.5rem);
+    border: none;
+    border-bottom: #a9a9a9 thin solid;
+    background-color: transparent;
+    outline: none;
+    width: calc(var(--expanded-width-px) - 2rem);
+}
