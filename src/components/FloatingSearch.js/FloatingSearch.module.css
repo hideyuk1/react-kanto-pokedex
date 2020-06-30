@@ -18,7 +18,7 @@
 }
 
 .buttonRoot {
-    background-color: var(--test);
+    composes: plainButton from from '~global.module.css';
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -26,25 +26,10 @@
     width: diameter;
     font-size: 2rem;
     border-radius: 50%;
-    cursor: pointer;
     display: flex;
-    border: 0;
-    padding: 0;
-    margin: 0;
     justify-content: center;
     align-items: center;
     transition: transform 200ms linear;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.buttonRoot:focus {
-    outline: none;
 }
 
 .common {

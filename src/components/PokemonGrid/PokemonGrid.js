@@ -109,7 +109,7 @@ export default function PokemonGrid(props) {
                     title: expandedPokedexId,
                     name: expandedPokemonName,
                 }}
-                onClick={() => {
+                onCloseButtonClick={() => {
                     setSelected(false);
                 }}
                 title={selectedPokemonId}

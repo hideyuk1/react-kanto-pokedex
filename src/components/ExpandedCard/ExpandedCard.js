@@ -1,10 +1,11 @@
 import React from 'react';
+import { FiX } from 'react-icons/fi';
 import styles from './ExpandedCard.module.css';
 
 function ExpandedCard(props, ref) {
-    const { title, image, name, description, ...buttonProps } = props;
+    const { title, image, name, description, onCloseButtonClick, ...rootProps } = props;
     return (
-        <button className={styles.root} ref={ref.root} {...buttonProps}>
+        <div className={styles.root} ref={ref.root} {...rootProps}>
             <span className={styles.title} ref={ref.title}>
                 {title}
             </span>
@@ -13,7 +14,10 @@ function ExpandedCard(props, ref) {
                 {name}
             </span>
             <p className={styles.description}>{description}</p>
-        </button>
+            <button onClick={onCloseButtonClick} className={styles.closeButton}>
+                <FiX />
+            </button>
+        </div>
     );
 }
 

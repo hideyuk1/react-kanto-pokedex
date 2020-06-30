@@ -1,23 +1,19 @@
-
 .root {
     composes: flexColumnCentered from '~global.module.css';
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
     height: 100vh;
     width: 100vw;
-    border: none;
     font-family: Spartan;
-    cursor: pointer;
     font-size: calc(1rem + 2vmin);
-    outline: none;
     background-color: white;
-    -webkit-tap-highlight-color: transparent;
     position: fixed;
     margin: auto;
     top: 0;
     left: 0;
     padding: 12vh 12vw;
     visibility: hidden;
-    z-index: 1;  
+    z-index: 1;
+    box-sizing: border-box;
 }
 
 .title, .name {
@@ -26,4 +22,16 @@
 
 .description {
     font-size: calc(0.25rem + 2vmin);
+}
+
+.closeButton {
+    composes: flexColumnCentered from '~global.module.css';
+    composes: plainButton from '~global.module.css';
+    background-color: transparent;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: calc(2rem + 3vmin);
+    height: calc(4rem + 3vmin);
+    width: calc(4rem + 3vmin);
 }
