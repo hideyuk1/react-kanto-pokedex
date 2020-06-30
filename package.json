@@ -1,14 +1,28 @@
 {
-  "name": "react-pokedex",
+  "name": "react-kanto-pokedex",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-icons": "^3.10.0",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "typeface-spartan": "^1.1.4",
+    "web-animations-js": "^2.3.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2"
+  },
+  "author": "Lucas China",
+  "license": "MIT",
+  "homepage": "https://react-kanto-pokedex.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hideyuk1/react-kanto-pokedex"
   },
   "scripts": {
     "start": "react-scripts start",
