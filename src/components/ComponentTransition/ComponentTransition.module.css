@@ -1,0 +1,4 @@
+.invisible {
+    composes: invisible from '~global.module.css';
+    display: none;
+}
