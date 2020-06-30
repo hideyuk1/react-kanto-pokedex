@@ -12,7 +12,10 @@
   </a>
 </p>
 
-Kanto Pokedex website made with React.js, using CSS Grid Layout, react-transition-group, CSS transitions and Web Animations API.
+Kanto Pokedex website made with React.js, using:
+- CSS Grid Layout for layout
+- react-transition-group, CSS transitions and Web Animations API for animations
+- ResizeObserver for images lazy loading
 
 ### 🏠 [Homepage](https://react-kanto-pokedex.vercel.app/)
 
