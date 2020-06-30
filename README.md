@@ -15,7 +15,7 @@
 Kanto Pokedex website made with React.js, using:
 - CSS Grid Layout for layout
 - react-transition-group, CSS transitions and Web Animations API for animations
-- ResizeObserver for images lazy loading
+- IntersectionObserver for images lazy loading
 
 ### 🏠 [Homepage](https://react-kanto-pokedex.vercel.app/)
 
