@@ -3,7 +3,7 @@ import styles from './CardButton.module.css';
 
 function CardButton(props, ref) {
     const [isVisible, setIsVisible] = useState(false);
-    const { children, className } = props;
+    const { children, className = '' } = props;
     useEffect(() => {
         const current = ref.current;
         const observer = new IntersectionObserver(

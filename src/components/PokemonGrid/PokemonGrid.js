@@ -8,7 +8,13 @@ import { disableScroll, enableScroll } from 'utils/scroll';
 import styles from './PokemonGrid.module.css';
 
 export default function PokemonGrid(props) {
-    const { setSelectedPokemonId, selectedPokemonId, cardWidth, filterFunction, className } = props;
+    const {
+        setSelectedPokemonId,
+        selectedPokemonId,
+        cardWidth,
+        filterFunction,
+        className = '',
+    } = props;
     const [selected, setSelected] = useState(false);
     const selectPokemon = (id) => {
         setSelectedPokemonId(id);
