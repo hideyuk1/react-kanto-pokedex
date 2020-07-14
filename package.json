@@ -18,6 +18,12 @@
     "@testing-library/user-event": "^7.1.2",
     "react-snap": "^1.23.0"
   },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
   "author": "Lucas China",
   "license": "MIT",
   "homepage": "https://react-kanto-pokedex.vercel.app/",
