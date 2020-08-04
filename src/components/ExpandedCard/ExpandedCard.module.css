@@ -21,7 +21,8 @@
 }
 
 .description {
-    font-size: calc(0.25rem + 2vmin);
+    font-size: calc(0.75rem + 2vmin);
+    text-align: center;
 }
 
 .closeButton {
